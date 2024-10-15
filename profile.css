@@ -1,0 +1,189 @@
+/* Reset some default styles for consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling with responsive layout */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Form layout with improved responsive flexbox */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fieldset styling with smooth border animations */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: border 0.3s ease;
+}
+
+fieldset:hover {
+  border-color: #800000;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #800000;
+}
+
+/* Label and input styling */
+label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #800000;
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 0;
+  display: none;
+}
+
+/* Profile picture preview */
+img {
+  display: block;
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Button styling with hover effects and smooth transitions */
+button {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #a52a2a;
+  transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+/* Centered message styling */
+#message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #800000;
+}
+
+/* Custom label that will act as the file input button */
+.custom-file-upload {
+  display: inline-block;
+  background-color: #800000;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the custom button */
+.custom-file-upload:hover {
+  background-color: #a52a2a;
+  transform: translateY(-2px);
+}
+
+/* Styling for the "No file chosen" part */
+#file-name {
+  font-size: 1rem;
+  margin-left: 15px;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

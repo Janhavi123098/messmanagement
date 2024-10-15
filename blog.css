@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hangyaboly', sans-serif;
+    background-color: white;
+    color: #800000;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.create-post {
+    background-color: white;
+    color: #800000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #800000;
+    width: 100%;
+}
+
+button {
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.scroll-button {
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.scroll-button:hover {
+    background-color: #660000;
+    text-decoration: underline;
+}
+
+#postsContainer {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow posts to wrap to the next line */
+    gap: 20px; /* Add space between posts */
+    justify-content: space-between; /* Distribute posts evenly */
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #fff;
+    color: #000000;
+    padding: 15px;
+    width: 48%; /* Each post takes up nearly half the container width */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #800000;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Align post content vertically */
+}
+
+.post img {
+    width: 100%; /* Make the image take full width of the post */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post .post-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.post .post-actions {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    margin-right: 10px;
+}
+
+.like-count, .comment-count {
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}

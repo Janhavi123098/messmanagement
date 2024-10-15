@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftogram</title>
+    <link rel="stylesheet" href="gallery_blogs.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Craftogram</h1>
+        <div class="nav-buttons">
+            <button id="postsBtn">Posts</button>
+            <button id="blogsBtn">Blogs</button>
+        </div>
+    </header>
+
+   
+<!-- Posts Section -->
+<section id="postsSection" class="section">
+    <h2>Posts Section</h2>
+    <p>This is the content of the Posts section. It will be displayed by default.</p>
+    <div id="gallery" class="gallery">
+        <!-- Handicraft Images (initially displayed) -->
+        <img src="https://via.placeholder.com/150" alt="Handicraft 1">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 2">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 3">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 4">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 5">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 6">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 7">
+        <img src="https://via.placeholder.com/150" alt="Handicraft 8">
+    </div>
+    <button id="loadMorePosts" class="load-more-button">Load More Posts</button>
+</section>
+
+<!-- Blogs Section -->
+<section id="blogsSection" class="section">
+    <h2>Blogs Section</h2>
+    <p>Here you will find various blogs about handicraft works.</p>
+    <div id="blogs" class="blogs">
+        <article class="blog-post">
+            <h3>Blog 1: The Art of Handicraft</h3>
+            <p>This blog explores different styles of handicraft art... <span class="read-more" onclick="openModal(1)">Read More</span></p>
+        </article>
+        <article class="blog-post">
+            <h3>Blog 2: Traditional vs. Modern Craftsmanship</h3>
+            <p>A deep dive into how handicraft evolved over time... <span class="read-more" onclick="openModal(2)">Read More</span></p>
+        </article>
+        <article class="blog-post">
+            <h3>Blog 3: Handmade Jewelry Trends</h3>
+            <p>Handmade jewelry is a growing trend in modern fashion... <span class="read-more" onclick="openModal(3)">Read More</span></p>
+        </article>
+    </div>
+    <button id="loadMoreBlogs" class="load-more-button">Load More Blogs</button>
+</section>
+
+<!-- Modal Code (as described before) -->
+
+
+<!-- Modal Window -->
+<div id="blogModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="blogImage" src="" alt="Blog Image" class="modal-image">
+        <h3 id="blogTitle"></h3>
+        <p><em id="blogAuthor">Written by</em></p>
+        <p id="blogFullDescription"></p>
+        <p class="created-date" id="blogDate"></p>
+    </div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTopBtn" class="back-to-top" onclick="scrollToTop()">
+    &#8679;
+</button>
+
+    <script src="gallery_blogs.js"></script>
+</body>
+</html>

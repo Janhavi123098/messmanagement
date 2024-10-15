@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftogram - Share Your Crafting Journey</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to CRAFTOGRAM</h1>
+        <h2>Share your experiences, techniques, and stories!</h2>
+    </header>
+
+    <main>
+        <section class="create-post">
+            <h3>Create a New Post</h3>
+            <form id="postForm" enctype="multipart/form-data" action="save_post.php" method="POST">
+                <input type="text" name="postTitle" placeholder="Post Title" required>
+                
+                <textarea name="postContent" placeholder="Write your story..." required></textarea>
+
+                <label for="postCategory">Category:</label>
+                <select name="postCategory">
+                    <option value="techniques">Techniques</option>
+                    <option value="experiences">Experiences</option>
+                    <option value="personal">Personal stories</option>
+                </select>
+
+                <label for="postImages">Upload Images:</label>
+                <input type="file" name="postImages[]" accept="image/*" multiple>
+
+                <button type="submit">Publish</button>
+            </form>
+        </section>
+
+        <section id="postsSection">
+            <h3>Recent Posts</h3>
+            <div id="postsContainer">
+                <!-- Blog posts will appear here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 CRAFTOGRAM. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

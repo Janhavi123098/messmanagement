@@ -1,0 +1,599 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Ensure the navbar elements stay in a row and align properly */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8c3131;
+    margin: 0;
+}
+
+/* Header */
+header {
+    height: 100px;
+    background-color: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+/* Disable default focus outline and background color on click */
+button:focus, 
+button:active {
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove the box shadow */
+    background-color: inherit; /* Keep the same background */
+}
+
+/* Disable focus visible state outline */
+button:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background-color: inherit;
+}
+
+/* Override browser-specific behavior for WebKit-based browsers */
+button:focus,
+button:active {
+    -webkit-tap-highlight-color: transparent; /* Disable the blue flash */
+}
+
+/* Custom button styles */
+#searchButton {
+    background-color: #800000; /* Your custom button color */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+#searchButton:hover {
+    background-color: #982B1C; /* Darker on hover */
+}
+#searchButton:focus,
+#searchButton:active {
+    background-color: #982B1C; /* Same color on active/focus */
+}
+
+#searchInput{
+    border-color: #800000; 
+}
+#searchInput:focus,
+#searchInput:active {
+   border-color: #982B1C; /* Same color on active/focus */
+   box-shadow: none;
+}
+
+
+#findButton {
+    background-color: #800000; /* Your custom button color */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+#findButton:hover {
+    background-color: #982B1C; /* Darker on hover */
+}
+#findButton:focus,
+#findButton:active {
+    background-color: #982B1C; /* Same color on active/focus */
+}
+
+#createButton {
+    background-color: #800000; /* Your custom button color */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+#createButton:hover {
+    background-color: #982B1C; /* Darker on hover */
+}
+#createButton:focus,
+#createButton:active {
+    background-color: #982B1C; /* Same color on active/focus */
+}
+
+/* Similarly apply custom styles for the other buttons */
+button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #982B1C;
+}
+
+button:focus,
+button:active {
+    background-color: #982B1C;
+}
+
+
+/* Container that holds the buttons */
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns buttons to the left */
+    gap: 15px; /* Creates uniform space between buttons */
+}
+
+/* calender button styling */
+#calendarButton button {
+    background-color: #800000; /* Background color matching the theme */
+    color: white; /* Text color */
+    border: none;
+    padding: 8px 12px; /* Adjust padding */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    height:39px;
+    border-radius: 5px;
+}
+
+/* Hover effect for the calendar button */
+#calendarButton button:hover {
+    background-color: #8c3131; /* Darken on hover */
+}
+
+/* Sidebar */
+/* Custom Theme for Filter Section */
+.filters-sidebar {
+    background-color: #8c3131;
+    color: #fff;
+}
+.filters-sidebar h4 {
+    color: black;
+}
+.filters-sidebar .form-label {
+    color: black;
+}
+.filters-sidebar .form-control,
+.filters-sidebar .form-select {
+    background-color: #fff;
+    color: #800000;
+    border-color: #8c3131;
+}
+.filters-sidebar .form-control::placeholder {
+    color: #982B1C;
+}
+.filters-sidebar .btn-primary {
+    background-color:#fff;
+    color: #8c3131;
+    border: #8c3131 solid 1px; ;
+}
+.filters-sidebar .btn-primary:hover {
+    background-color: #800000;
+    color: #fff;
+}
+
+/* Style for the select dropdown */
+.filters-sidebar .form-select {
+    background-color: #fff;
+    color: #800000;
+    border-color: #8c3131;
+    appearance: none; /* Removes default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px; /* Space for custom arrow */
+    position: relative;
+}
+
+/* Add custom dropdown arrow */
+.filters-sidebar .form-select::after {
+    content: '\25BC'; /* Custom arrow character */
+    color: #800000; /* Color of the arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style the dropdown options */
+.filters-sidebar .form-select option {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* Style when selecting options */
+.filters-sidebar .form-select:focus {
+    outline: none;
+    border-color: #800000;
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.5);
+}
+/*
+.mb-3 .form-select option:nth-child(1):hover{
+    background-color:#800000;
+    color:#fff;
+}
+.mb-3 .form-select option:nth-child(2):hover{
+    background-color:#800000;
+    color:#fff;
+}
+.mb-3 .form-select option:nth-child(3):hover{
+    background-color:#800000;
+    color:#fff;
+}
+*/
+/* Apply linear gradient to selected option using :checked */
+option:checked {
+    background: linear-gradient(#800000, #800000); /* You can change this to any gradient you want */
+    color: white; /* Text color for selected option */
+}
+/* Option styling */
+option {
+    padding: 8px;
+    background-color: white;
+    color: #800000;
+}
+
+/* Option hover effect */
+.mb-3 .form-select option:hover {
+    background-color: #800000; /* Background color when hovering over options */
+    color: #fff; /* Text color when hovering */
+}
+
+/* Customize Flatpickr input field */
+.flatpickr-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #800000;
+    font-size: 16px;
+    background-color:#fff;
+    color: #800000;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Change the background color of the Flatpickr calendar */
+.flatpickr-calendar {
+    background-color: #fff !important;  /* Change the calendar background color */
+}
+
+/* Change hover color for flatpickr calendar dates */
+.flatpickr-day:hover {
+    background-color: #67090991 !important;  /* Custom hover color */
+    color: white !important;  /* Change text color to contrast with background */
+}
+
+/* Customize the selected date's color */
+.flatpickr-day.selected {
+    background-color: #800000 !important;
+    color: white !important;
+}
+
+
+
+
+/* Override Bootstrap primary color */
+:root {
+    --bs-primary: #800000; /* Custom dark red color */
+    --bs-body-bg: #fff;    /* White background */
+    --bs-body-color: #000; /* Optional: Set body text color */
+    --bs-blue:var(--bs-primary);
+    --bs-link-hover-color:var(--bs-primary);
+  }
+  
+  /* Additional custom styling for Bootstrap components */
+  .btn-primary {
+    background-color: #800000;
+    border-color: #800000;
+    min-width: 150px;
+    margin-right: 15px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #600000; /* Slightly darker shade on hover */
+    border-color: #600000;
+  }
+  .btn-primary:active{
+    background-color: #600000; /* Slightly darker shade on hover */
+    border-color: #600000;
+  }
+  
+  
+
+/* Style for the Create Event button */
+.btn-success {
+    background-color: #800000; /* Dark red background */
+    border-color: #800000; /* Dark red border */
+    color: #fff; /* White text color */
+    min-width: 150px;
+    margin-right: 15px;
+}
+
+.btn-success:hover {
+    background-color: #600000; /* Darker red background on hover */
+    border-color: #600000; /* Darker red border on hover */
+    color: #fff; /* Ensure text color remains white on hover */
+}
+
+/* Optional: Button focus style */
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.5); /* Light red shadow for focus */
+}
+.btn-success:active {
+    background-color: #600000; /* Slightly darker shade on hover */
+    border-color: #600000;
+}
+
+/* Search bar */
+.search-bar {
+    flex-grow: 1;
+    max-width: 500px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    background-color: #8c3131;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 8px;
+    height: 40px;
+}
+
+.search-bar button:hover {
+    background-color: #982B1C;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+
+
+/* Event cards */
+.events {
+    padding: 20px 0;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
+}
+
+/* Hover effect on event card */
+.event-card:hover {
+    transform: translateY(-10px); /* Moves the card upwards */
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.5); /* Adds shadow */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+.event-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 1.4rem;
+    color: #8c3131;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.event-card .event-date {
+    font-weight: bold;
+    color: #982B1C;
+}
+
+.event-card button {
+    background-color: #8c3131;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-card button:hover {
+    background-color: #982B1C;
+}
+
+/* Modal */
+/* Custom styles for modals */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #8c3131;
+    color: #fff;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-footer button {
+    background-color: #8c3131;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-footer button:hover {
+    background-color: #982B1C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    main {
+        padding: 10px;
+    }
+}
+
+/* Modal common styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-header {
+    background-color: #8c3131;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    padding: 10px;
+}
+
+.modal-body p, .modal-body form {
+    margin: 15px 0;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Event card buttons */
+.event-card button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #8c3131;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-card button:hover {
+    background-color: #982B1C;
+}
+
+/* Form styles */
+form input[type="text"], form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #8c3131;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #982B1C;
+}

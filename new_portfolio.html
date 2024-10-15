@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="new_portfolio.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <button id='edit-profile'><a href="new_profile.html">Edit Profile</a></button>
+                <button id="logout-button">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-and-posts">
+            <div class="profile-header">
+                <img id="profile-pic" src="default-profile.jpg" alt="Profile Picture">
+                <div class="profile-info">
+                    <h1 id="profile-name"></h1>
+                    <strong><p style="font-size: 40px;">Hi I am <span id="first-name"></span> <span id="last-name"></span></p></strong>
+                    <p><span id="bio"></span></p>
+                    <!-- <p>Here is my info if you wish to contact me:</p> -->
+                    <p>Email: <span id="email"></span></p>
+                    <p>Phone: <span id="phone"></span></p>
+                    <button class="scroll-button">Go to Create Post</button>
+                </div>
+            </div>
+
+            <!-- Create Post Section -->
+            <div class="create-post">
+                <h2>Create a Post</h2>
+                <form id="post-form">
+                    <label for="post-image">Upload Image:</label>
+                    <input type="file" id="post-image" accept="image/*">
+                    <label for="post-caption">Caption:</label>
+                    <textarea id="post-caption" placeholder="Add a caption..."></textarea>
+                    <button type="button" id="add-post">Add Post</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Posts gallery -->
+        <div id="posts-container">
+            <h1><b>Your Posts</b></h1>
+            <!-- Posts will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <script src="new_portfolio.js"></script>
+</body>
+</html>

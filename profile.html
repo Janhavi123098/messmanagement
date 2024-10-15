@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile Page</h1>
+      <form id="profile-form" method="POST" enctype="multipart/form-data" action="profile.php">
+
+        <fieldset>
+          <legend>Profile Picture</legend>
+          <label for="profile-pic" class="custom-file-upload"
+            >Upload Profile Picture:</label
+          >
+          <input type="file" name="profile_pic" id="profile-pic" accept="image/*" />
+          <img
+            id="profile-pic-preview"
+            src="default-profile.jpg"
+            alt="Preview Picture"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="username">User_id:</label>
+          <input type="text" name="username" id="username" required />
+
+          <label for="first-name">First Name:</label>
+          <input type="text" name="first_name" id="first-name" required />
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" name="last_name" id="last-name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone" />
+
+          <!-- <label for="address">Address:</label>
+                <input type="text" id="address">
+
+                <label for="city">City:</label>
+                <input type="text" id="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state">
+
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip"> -->
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" name="dob" id="dob" />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <option value="">Select...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio"></textarea>
+        </fieldset>
+
+        <!-- <fieldset>
+                <legend>Profile Picture</legend>
+                <label for="profile-pic">Upload Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+                <img id="profile-pic-preview" src="default-profile.jpg" alt="Profile Picture Preview">
+            </fieldset> -->
+
+        <button type="submit">Save Profile</button>
+        <p id="message"></p>
+      </form>
+    </div>
+    <script src="profile.js"></script>
+  </body>
+</html>
